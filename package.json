@@ -4,8 +4,9 @@
   "description": "Lightweight and powerful Javascript hooks for common UI elements",
   "main": "flightdeck.js",
   "scripts": {
-    "build": "webpack --progress --config webpack.config.prod.js",
-    "build:dev": "webpack --progress --colors --watch --config webpack.config.dev.js"
+    "build": "webpack --config webpack.config.prod.js",
+    "build:dev": "webpack --progress --colors --watch --config webpack.config.dev.js",
+    "prepare": "yarn run build"
   },
   "repository": {
     "type": "git",
