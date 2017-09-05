@@ -7,19 +7,22 @@ export default class Modal {
      *
      * @param {string} elementId - The id of the DOM element representing the
      * modal dialog container
+     * @param {function} closeFunction - An optional function to run when the
+     *  modal closes (i.e. to empty out the fields of a form)
      */
-    constructor(elementId) {
+    constructor(elementId, closeFunction) {
         this.el = document.getElementById(elementId);
+        this.closeFunction = closeFunction;
 
         // If the modal background area is clicked, close the modal
         document.addEventListener('click', (event) => {
-            if (event.currentTarget.classList.contains('.modal')) {
-                this.hide();
+            if (event.currentTarget.classList && event.currentTarget.classList.contains('.modal')) {
+                this.close();
             }
         });
         // If anything in the modal with the 'modal-close' class is clicked, close the modal
         this.el.querySelector('.modal-close').addEventListener('click', () => {
-            this.hide();
+            this.close();
         });
     }
 
@@ -32,14 +35,11 @@ export default class Modal {
 
     /**
      * Dismisses the modal dialog
-     *
-     * @param {function} closeFunction - An optional function to run when the
-     *  modal closes (i.e. to empty out the fields of a form)
      */
-    close(closeFunction) {
+    close() {
         this.el.classList.remove('open');
-        if (closeFunction && typeof closeFunction === 'function') {
-            closeFunction();
+        if (this.closeFunction && typeof this.closeFunction === 'function') {
+            this.closeFunction();
         }
     }
 }
