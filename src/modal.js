@@ -16,7 +16,7 @@ export default class Modal {
 
         // If the modal background area is clicked, close the modal
         document.addEventListener('click', (event) => {
-            if (event.currentTarget.classList && event.currentTarget.classList.contains('.modal')) {
+            if (event.target.classList && event.target.classList.contains('modal')) {
                 this.close();
             }
         });
