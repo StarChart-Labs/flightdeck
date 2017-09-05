@@ -2,7 +2,7 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        flightdeck: [ 
+        flightdeck: [
             './src/button',
             './src/modal'
         ]
@@ -22,6 +22,7 @@ module.exports = {
     },
     plugins: [
         new webpack.optimize.UglifyJsPlugin({
+            mangle: false,
             compress: {
                 warnings: false
             }
