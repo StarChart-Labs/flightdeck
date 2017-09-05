@@ -9,7 +9,8 @@ module.exports = {
     },
     output: {
         filename: '[name].js',
-        path: __dirname
+        path: __dirname,
+        library: 'flightdeck'
     },
     module: {
         loaders: [
