@@ -6,7 +6,6 @@
   "scripts": {
     "build": "webpack --config webpack.config.prod.js",
     "build:dev": "webpack --progress --colors --watch --config webpack.config.dev.js",
-    "prepare": "yarn run build"
   },
   "repository": {
     "type": "git",
@@ -22,6 +21,9 @@
   ],
   "author": "Starchart Labs",
   "license": "MIT",
+  "files": [
+    "flightdeck.js"  
+  ],
   "bugs": {
     "url": "https://github.com/StarChart-Labs/flightdeck/issues"
   },
