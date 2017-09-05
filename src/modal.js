@@ -17,7 +17,7 @@ export default class Modal {
         this.closeFunction = closeFunction;
 
         // If not sticky, and the modal background area is clicked, close the modal
-        if(sticky === false)
+        if (sticky === false) {
             document.addEventListener('click', (event) => {
                 if (event.target.classList && event.target.classList.contains('modal')) {
                     this.close();
