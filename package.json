@@ -1,0 +1,44 @@
+{
+  "name": "@starchart-labs/flightdeck",
+  "version": "0.1.0",
+  "description": "Lightweight and powerful Javascript hooks for common UI elements",
+  "main": "flightdeck.js",
+  "scripts": {
+    "build": "webpack --progress --config webpack.config.prod.js",
+    "build:dev": "webpack --progress --colors --watch --config webpack.config.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StarChart-Labs/flightdeck.git"
+  },
+  "keywords": [
+    "ui",
+    "ux",
+    "button",
+    "buttons",
+    "modal",
+    "modals"
+  ],
+  "author": "Starchart Labs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StarChart-Labs/flightdeck/issues"
+  },
+  "homepage": "https://github.com/StarChart-Labs/flightdeck#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.5.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.7.0",
+    "webpack": "^3.5.5",
+    "yarn": "^0.27.5"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}
