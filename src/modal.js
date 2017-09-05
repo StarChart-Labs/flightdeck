@@ -7,19 +7,23 @@ export default class Modal {
      *
      * @param {string} elementId - The id of the DOM element representing the
      * modal dialog container
+     * @param {boolean} sticky - If true, clicking the background area will not close
+     * the modal
      * @param {function} closeFunction - An optional function to run when the
      *  modal closes (i.e. to empty out the fields of a form)
      */
-    constructor(elementId, closeFunction) {
+    constructor(elementId, sticky = false, closeFunction) {
         this.el = document.getElementById(elementId);
         this.closeFunction = closeFunction;
 
-        // If the modal background area is clicked, close the modal
-        document.addEventListener('click', (event) => {
-            if (event.target.classList && event.target.classList.contains('modal')) {
-                this.close();
-            }
-        });
+        // If not sticky, and the modal background area is clicked, close the modal
+        if(sticky === false)
+            document.addEventListener('click', (event) => {
+                if (event.target.classList && event.target.classList.contains('modal')) {
+                    this.close();
+                }
+            });
+        }
         // If anything in the modal with the 'modal-close' class is clicked, close the modal
         this.el.querySelector('.modal-close').addEventListener('click', () => {
             this.close();
