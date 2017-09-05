@@ -1,17 +1,14 @@
+const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-	devtool: 'eval',
-    entry: {
-        flightdeck: [
-            './src/button',
-            './src/modal'
-        ]
-    },
+    devtool: 'eval',
+    entry: './src/index',
     output: {
-        filename: '[name].js',
-        path: __dirname,
-        library: 'flightdeck'
+        path: path.join(__dirname, 'dist'),
+        filename: 'flightdeck.js',
+        library: 'flightdeck',
+        libraryTarget: 'amd'
     },
     module: {
         loaders: [

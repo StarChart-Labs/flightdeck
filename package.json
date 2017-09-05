@@ -2,7 +2,7 @@
   "name": "@starchart-labs/flightdeck",
   "version": "0.1.1",
   "description": "Lightweight and powerful Javascript hooks for common UI elements",
-  "main": "flightdeck.js",
+  "main": "dist/flightdeck.js",
   "scripts": {
     "build": "webpack --config webpack.config.prod.js",
     "build:dev": "webpack --progress --colors --config webpack.config.dev.js"
@@ -22,7 +22,7 @@
   "author": "Starchart Labs",
   "license": "MIT",
   "files": [
-    "flightdeck.js"
+    "dist/flightdeck.js"
   ],
   "bugs": {
     "url": "https://github.com/StarChart-Labs/flightdeck/issues"

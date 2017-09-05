@@ -58,4 +58,4 @@ typings/
 .env
 
 # Built flightdeck output file
-#/flightdeck.js
+/dist/

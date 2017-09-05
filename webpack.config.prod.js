@@ -1,16 +1,13 @@
+const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-    entry: {
-        flightdeck: [
-            './src/button',
-            './src/modal'
-        ]
-    },
+    entry: './src/index',
     output: {
-        filename: '[name].js',
-        path: __dirname,
-        library: 'flightdeck'
+        path: path.join(__dirname, 'dist'),
+        filename: 'flightdeck.js',
+        library: 'flightdeck',
+        libraryTarget: 'amd'
     },
     module: {
         loaders: [
@@ -23,7 +20,6 @@ module.exports = {
     },
     plugins: [
         new webpack.optimize.UglifyJsPlugin({
-            mangle: false,
             compress: {
                 warnings: false
             }
