@@ -1,5 +1,5 @@
 # flightdeck.js
-[![Build Status](https://travis-ci.org/StarChart-Labs/flightdeck.svg?branch=master)](https://travis-ci.org/StarChart-Labs/flightdeck) [![npm (scoped)](https://img.shields.io/npm/v/@starchart-labs/flightdeck.svg)]()
+[![Build Status](https://travis-ci.org/StarChart-Labs/flightdeck.svg?branch=master)](https://travis-ci.org/StarChart-Labs/flightdeck) [![npm (scoped)](https://img.shields.io/npm/v/@starchart-labs/flightdeck.svg)](https://www.npmjs.com/package/@starchart-labs/flightdeck)
 
 Flightdeck is a collection of lightweight and powerful Javascript modules for common web UI elements. The goal is to bring object-oriented sensibilities to the script-side of the UI. For example, a button in HTML is tied to an instance of the Button class in Flightdeck.
 
