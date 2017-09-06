@@ -25,9 +25,9 @@ export default class Modal {
             });
         }
         // If anything in the modal with the 'modal-close' class is clicked, close the modal
-        if (this.el && this.el.querySelector('.modal-close')) {
-            this.el.querySelectorAll('.modal-close').forEach(() => {
-                addEventListener('click', () => {
+        if (this.el) {
+            this.el.querySelectorAll('.modal-close').forEach((item) => {
+                item.addEventListener('click', () => {
                     this.close();
                 });
             });
