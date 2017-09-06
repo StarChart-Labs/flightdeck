@@ -1,6 +1,6 @@
 {
   "name": "@starchart-labs/flightdeck",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "Lightweight and powerful Javascript hooks for common UI elements",
   "main": "dist/flightdeck.js",
   "scripts": {
